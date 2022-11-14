@@ -1,0 +1,22 @@
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+  <div class="nomarLR mt-1 float-left col-12" *ngFor="let x of listA;let i =index" cdkDrag>
+					<mat-accordion multi="false" class="cus-accordion-style2 col-12"
+						class="nomarLR nomarTB">
+						<mat-expansion-panel class="nomarLR nomarTB" >
+							<mat-expansion-panel-header class="nomarLR nomarTB">
+								<mat-panel-title class="nomarLR nomarTB">
+									{{x.name}}
+                  </mat-panel-title>
+							</mat-expansion-panel-header>
+              <div *ngFor= "let y of listA">
+                <span *ngFor="let z of y.favMember"> {{z.artist}} </span>
+              </div>
+						</mat-expansion-panel>
+					</mat-accordion>
+			</div>
+</div>
+
+
+<!-- Copyright 2019 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
